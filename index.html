@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Naglis Bražėnas — Data Science portfolio.">
+  <meta name="theme-color" content="#f7f7f4">
+  <title>Naglis Bražėnas — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Naglis Bražėnas, home">NB<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#other">Other work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="header-label">Data Science · Vilnius</span>
+  </header>
+
+  <main>
+    <section class="intro page-width" id="top">
+      <div class="intro-copy">
+        <p class="kicker">Naglis Bražėnas <span class="dash">/</span> Data Science student</p>
+        <h1>Working with data<br>to find <em>useful answers.</em></h1>
+        <div class="intro-bottom">
+          <p>I study Data Science at Vilnius University. I enjoy solving analytical problems — from exploring datasets to building and evaluating models.</p>
+          <a class="underlined-link" href="#projects">Explore selected work <span>↓</span></a>
+        </div>
+      </div>
+      <div class="intro-graphic" aria-hidden="true">
+        <div class="graphic-top"><span>DATA / 01</span><span>ANALYSIS</span></div>
+        <svg viewBox="0 0 250 170" role="img" aria-label="Abstract data trend chart">
+          <path class="gridline" d="M8 30H242 M8 70H242 M8 110H242 M8 150H242"/>
+          <path class="chart-area" d="M8 133 C30 125 37 91 61 99 S91 122 113 83 S147 96 165 58 S202 70 242 16 L242 150 L8 150Z"/>
+          <path class="chart-line" d="M8 133 C30 125 37 91 61 99 S91 122 113 83 S147 96 165 58 S202 70 242 16"/>
+          <circle cx="165" cy="58" r="4" class="chart-point"/>
+          <circle cx="242" cy="16" r="4" class="chart-point"/>
+        </svg>
+        <div class="graphic-bottom"><span>OBSERVE</span><span>MODEL</span><span>INTERPRET</span></div>
+      </div>
+    </section>
+
+    <section class="projects page-width" id="projects">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Selected work</p>
+          <h2>Projects</h2>
+        </div>
+        <p class="section-note">A closer look at a few larger projects, including personal work and university coursework.</p>
+      </div>
+
+      <div class="project-list">
+        <article class="project">
+          <div class="project-meta"><span>Finance / Automation</span></div>
+          <div class="project-content">
+            <div class="project-title-row"><h3>Automated trading system</h3><span class="type-tag personal">Personal project</span></div>
+            <p>A Python-based system that analyses market data and news sentiment, then independently executes trades in a paper-trading environment.</p>
+            <details>
+              <summary>Project details</summary>
+              <div class="detail-body">
+                <p>The system combines historical price data, technical indicators and sentiment analysis of daily financial news. Rather than only generating alerts, it makes simulated investment decisions and executes trades through a paper-trading account.</p>
+                <p class="result"><strong>Paper-trading test:</strong> approximately 2–3% monthly return over a three-month testing period. This is a simulated result, not a live-investment track record or a guarantee of future performance.</p>
+                <p><strong>Tools:</strong> Python, pandas, financial data APIs, NLP, technical indicators.</p>
+                <a class="report-link" href="docs/trading-system-report.pdf" target="_blank" rel="noopener">Read detailed project report <span>↗</span></a>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><span>NLP / Text Analysis</span></div>
+          <div class="project-content">
+            <div class="project-title-row"><h3>Analysis of Lithuanian parliamentary transcripts</h3><span class="type-tag team">Team project</span></div>
+            <p>Using natural language processing to explore how topics, sentiment and key phrases in Seimas transcripts differ across parliamentary terms.</p>
+            <details>
+              <summary>Project details</summary>
+              <div class="detail-body">
+                <p>The coursework focuses on Lithuanian Seimas transcripts and compares material from the 2016–2020 and 2020–2024 periods. The analysis looks at recurring topics, sentiment and characteristic phrases to identify similarities and changes in parliamentary discussions.</p>
+                <p><strong>Focus:</strong> text preprocessing, NLP, topic exploration, sentiment analysis and key-phrase extraction.</p>
+                <a class="report-link" href="docs/parliamentary-transcripts-report.pdf" target="_blank" rel="noopener">Read detailed coursework report <span>↗</span></a>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><span>NLP / Topic Modelling</span></div>
+          <div class="project-content">
+            <div class="project-title-row"><h3>Exploring themes in song lyrics</h3><span class="type-tag team">Team project</span></div>
+            <p>Comparing topic-modelling methods to identify recurring themes in pop, rap and rock lyrics.</p>
+            <details>
+              <summary>Project details</summary>
+              <div class="detail-body">
+                <p>The project compares LSA, NMF and LDA across lyrics from selected artists and genres. It also examines how preprocessing choices — including removing choruses — affect the resulting topics.</p>
+                <p><strong>Tools:</strong> Python, NLP, LSA, NMF, LDA.</p>
+                <a class="report-link" href="docs/lyrics-topic-modelling-report.pdf" target="_blank" rel="noopener">Read detailed project report <span>↗</span></a>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><span>Machine Learning / Computer Vision</span></div>
+          <div class="project-content">
+            <div class="project-title-row"><h3>Muffin or chihuahua?</h3><span class="type-tag personal">Personal project</span></div>
+            <p>Training a convolutional neural network to distinguish between images of muffins and chihuahuas.</p>
+            <details>
+              <summary>Project details</summary>
+              <div class="detail-body">
+                <p>The dataset contained 5,917 images split into training, validation and test sets. The CNN was trained on resized images and evaluated on a held-out test set.</p>
+                <p class="result"><strong>Test accuracy:</strong> 77.23% in the recorded experiment.</p>
+                <p><strong>Tools:</strong> Python, TensorFlow / Keras, NumPy, Matplotlib.</p>
+                <a class="report-link" href="docs/muffin-chihuahua-report.pdf" target="_blank" rel="noopener">Read detailed project report <span>↗</span></a>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><span>Regression / Statistics</span></div>
+          <div class="project-content">
+            <div class="project-title-row"><h3>Regression analysis</h3><span class="type-tag team">Coursework</span></div>
+            <p>A selected regression project will be presented here, with its research question, modelling approach and key findings.</p>
+            <details>
+              <summary>Project details</summary>
+              <div class="detail-body">
+                <p>This section is reserved until the specific regression assignment and its results are confirmed.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="other-work page-width" id="other">
+      <div class="other-heading">
+        <div>
+          <p class="kicker">Additional work</p>
+          <h2>Other projects</h2>
+        </div>
+        <p>Alongside the selected projects, I have completed other coursework and smaller experiments in data analysis, statistics and neural networks.</p>
+      </div>
+      <div class="other-bottom">
+        <div class="other-topics">
+          <span>Statistical analysis</span>
+          <span>Regression exercises</span>
+          <span>Neural network experiments</span>
+          <span>Data processing</span>
+          <span>Data visualisation</span>
+        </div>
+        <p class="availability-note">Additional project descriptions, code and reports are available upon request.</p>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="page-width about-inner">
+        <div>
+          <p class="kicker">About</p>
+          <h2>Curious, analytical<br>and always learning.</h2>
+        </div>
+        <div class="about-copy">
+          <p>I’m a Data Science student at Vilnius University. I like working through the full analytical process: understanding a question, preparing the data, choosing an appropriate method and interpreting the results.</p>
+          <p>I’m currently looking for an opportunity to apply my skills in a professional environment and learn from real-world data projects.</p>
+          <div class="skills">
+            <span class="kicker">Tools &amp; methods</span>
+            <p>Python · R · SQL · pandas · NumPy · Machine Learning · NLP · Statistics · Data Visualisation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact page-width" id="contact">
+      <p class="kicker">Contact</p>
+      <div class="contact-inner">
+        <h2>Let’s talk.</h2>
+        <p>I’m open to Data Science and Data Analyst internship opportunities. You can reach me through the links below.</p>
+      </div>
+      <div class="contact-links">
+        <!-- Replace the placeholder values with your real links before publishing. -->
+        <a href="mailto:YOUR_EMAIL@example.com">Email ↗</a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-width footer">
+    <span>© <span id="year">2026</span> Naglis Bražėnas</span>
+    <span>Made with HTML &amp; CSS</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
