@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Naglis Bražėnas — Data Science portfolio.">
-  <meta name="theme-color" content="#f7f7f4">
+  <meta name="theme-color" content="#080c0b">
   <title>Naglis Bražėnas - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -13,9 +16,9 @@
   <header class="site-header">
     <a class="logo" href="#top" aria-label="Naglis Bražėnas, home">NB<span>.</span></a>
     <nav aria-label="Main navigation">
+      <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#other">Other work</a>
-      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
     <span class="header-label">Data Science · Vilnius</span>
@@ -33,10 +36,10 @@
       </div>
       <div class="intro-graphic" aria-hidden="true">
         <div class="graphic-top"><span>DATA / 01</span><span>ANALYSIS</span></div>
-        <svg viewBox="0 0 250 170" role="img" aria-label="Abstract data trend chart">
+        <svg viewBox="0 0 250 170" role="img" aria-label="Abstract data trend chart"><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8ff5c" stop-opacity=".22"/><stop offset="1" stop-color="#b8ff5c" stop-opacity="0"/></linearGradient></defs>
           <path class="gridline" d="M8 30H242 M8 70H242 M8 110H242 M8 150H242"/>
           <path class="chart-area" d="M8 133 C30 125 37 91 61 99 S91 122 113 83 S147 96 165 58 S202 70 242 16 L242 150 L8 150Z"/>
-          <path class="chart-line" d="M8 133 C30 125 37 91 61 99 S91 122 113 83 S147 96 165 58 S202 70 242 16"/>
+          <path class="chart-line" pathLength="1" d="M8 133 C30 125 37 91 61 99 S91 122 113 83 S147 96 165 58 S202 70 242 16"/>
           <circle cx="165" cy="58" r="4" class="chart-point"/>
           <circle cx="242" cy="16" r="4" class="chart-point"/>
         </svg>
@@ -44,121 +47,7 @@
       </div>
     </section>
 
-    <section class="projects page-width" id="projects">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Selected work</p>
-          <h2>Projects</h2>
-        </div>
-        <p class="section-note">A closer look at a few larger projects, including personal work and university coursework.</p>
-      </div>
-
-      <div class="project-list">
-        <article class="project">
-          <div class="project-meta"><span>Finance / Automation</span></div>
-          <div class="project-content">
-            <div class="project-title-row"><h3>Automated trading system</h3><span class="type-tag personal">Personal project</span></div>
-            <p>A Python-based system that analyses market data and news sentiment, then independently executes trades in a paper-trading environment.</p>
-            <details>
-              <summary>Project details</summary>
-              <div class="detail-body">
-                <p>The system combines historical price data, technical indicators and sentiment analysis of daily financial news. Rather than only generating alerts, it makes simulated investment decisions and executes trades through a paper-trading account.</p>
-                <p class="result"><strong>Paper-trading test:</strong> approximately 2–3% monthly return over a three-month testing period. This is a simulated result, not a live-investment track record or a guarantee of future performance.</p>
-                <p><strong>Tools:</strong> Python, pandas, financial data APIs, NLP, technical indicators.</p>
-                <a class="report-link" href="docs/trading-system-report.pdf" target="_blank" rel="noopener">Read detailed project report <span>↗</span></a>
-              </div>
-            </details>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-meta"><span>NLP / Text Analysis</span></div>
-          <div class="project-content">
-            <div class="project-title-row"><h3>Analysis of Lithuanian parliamentary transcripts</h3><span class="type-tag team">Team project</span></div>
-            <p>Using natural language processing to explore how topics, sentiment and key phrases in Seimas transcripts differ across parliamentary terms.</p>
-            <details>
-              <summary>Project details</summary>
-              <div class="detail-body">
-                <p>The coursework focuses on Lithuanian Seimas transcripts and compares material from the 2016–2020 and 2020–2024 periods. The analysis looks at recurring topics, sentiment and characteristic phrases to identify similarities and changes in parliamentary discussions.</p>
-                <p><strong>Focus:</strong> text preprocessing, NLP, topic exploration, sentiment analysis and key-phrase extraction.</p>
-                <a class="report-link" href="docs/parliamentary-transcripts-report.pdf" target="_blank" rel="noopener">Read detailed coursework report <span>↗</span></a>
-              </div>
-            </details>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-meta"><span>NLP / Topic Modelling</span></div>
-          <div class="project-content">
-            <div class="project-title-row"><h3>Exploring themes in song lyrics</h3><span class="type-tag team">Team project</span></div>
-            <p>Comparing topic-modelling methods to identify recurring themes in pop, rap and rock lyrics.</p>
-            <details>
-              <summary>Project details</summary>
-              <div class="detail-body">
-                <p>The project compares LSA, NMF and LDA across lyrics from selected artists and genres. It also examines how preprocessing choices — including removing choruses — affect the resulting topics.</p>
-                <p><strong>Tools:</strong> Python, NLP, LSA, NMF, LDA.</p>
-                <a class="report-link" href="docs/lyrics-topic-modelling-report.pdf" target="_blank" rel="noopener">Read detailed project report <span>↗</span></a>
-              </div>
-            </details>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-meta"><span>Machine Learning / Computer Vision</span></div>
-          <div class="project-content">
-            <div class="project-title-row"><h3>Muffin or chihuahua?</h3><span class="type-tag personal">Personal project</span></div>
-            <p>Training a convolutional neural network to distinguish between images of muffins and chihuahuas.</p>
-            <details>
-              <summary>Project details</summary>
-              <div class="detail-body">
-                <p>The dataset contained 5,917 images split into training, validation and test sets. The CNN was trained on resized images and evaluated on a held-out test set.</p>
-                <p class="result"><strong>Test accuracy:</strong> 92.24% in the recorded experiment.</p>
-                <p><strong>Tools:</strong> Python, TensorFlow / Keras, NumPy, Matplotlib.</p>
-                <a class="report-link" href="docs/muffin-chihuahua-report.pdf" target="_blank" rel="noopener">Read detailed project report <span>↗</span></a>
-              </div>
-            </details>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-meta"><span>Regression / Statistics</span></div>
-          <div class="project-content">
-            <div class="project-title-row"><h3>Stroke prediction with binary response models</h3><span class="type-tag team">Team project</span></div>
-            <p>Comparing logit, probit and cloglog regression models to predict stroke from demographic, lifestyle and health indicators.</p>
-            <details>
-              <summary>Project details</summary>
-              <div class="detail-body">
-                <p>The coursework uses the Kaggle Stroke Prediction Dataset, which is strongly imbalanced (180 stroke cases among 3,343 cleaned records), so the classification threshold was tuned with the Youden index. The probit model performed best, and age, average glucose level, hypertension and heart disease were the significant risk factors.</p>
-                <p><strong>Tools:</strong> R, Python, logistic / probit / cloglog regression, ROC analysis.</p>
-                <a class="report-link" href="docs/stroke-regression-report.pdf" target="_blank" rel="noopener">Read detailed coursework report <span>↗</span></a>
-              </div>
-            </details>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="other-work page-width" id="other">
-      <div class="other-heading">
-        <div>
-          <p class="kicker">Additional work</p>
-          <h2>Other projects</h2>
-        </div>
-        <p>Alongside the selected projects, I have completed other coursework and smaller experiments in data analysis, statistics and neural networks.</p>
-      </div>
-      <div class="other-bottom">
-        <div class="other-topics">
-          <span>Statistical analysis</span>
-          <span>Regression exercises</span>
-          <span>Neural network experiments</span>
-          <span>Data processing</span>
-          <span>Data visualisation</span>
-        </div>
-        <p class="availability-note">Additional project descriptions, code and reports are available upon request.</p>
-      </div>
-    </section>
-
-<section class="about" id="about">
+    <section class="about" id="about">
   <div class="page-width about-inner">
     <div>
       <p class="kicker">About</p>
@@ -201,14 +90,131 @@
 
       <div class="skills">
         <span class="kicker">Tools &amp; methods</span>
-        <p>
-          Python · R · SQL · pandas · NumPy · Machine Learning ·
-          NLP · Statistics · Data Visualisation
-        </p>
+        <div class="skill-list"><span>Python</span><span>R</span><span>SQL</span><span>pandas</span><span>NumPy</span><span>Machine Learning</span><span>NLP</span><span>Statistics</span><span>Data Visualisation</span></div>
       </div>
     </div>
   </div>
 </section>
+
+    <section class="projects page-width" id="projects">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Selected work</p>
+          <h2>Projects</h2>
+        </div>
+        <p class="section-note">A closer look at a few larger projects, including personal work and university coursework.</p>
+      </div>
+
+      <div class="project-list">
+        <article class="project">
+          <div class="project-meta"><span>Finance / Automation</span></div>
+          <div class="project-content">
+            <div class="project-title-row"><h3>Automated trading system</h3><span class="type-tag personal">Personal project</span></div>
+            <p>A Python-based system that analyses market data and news sentiment, then independently executes trades in a paper-trading environment.</p>
+            <details>
+              <summary>Project details</summary>
+              <div class="detail-body">
+                <p>The system combines historical price data, technical indicators and sentiment analysis of daily financial news. Rather than only generating alerts, it makes simulated investment decisions and executes trades through a paper-trading account.</p>
+                <p class="result"><strong>Paper-trading test:</strong> approximately 2–3% monthly return over a three-month testing period. This is a simulated result, not a live-investment track record or a guarantee of future performance.</p>
+                <p><strong>Tools:</strong> Python, pandas, financial data APIs, NLP, technical indicators.</p>
+                <a class="report-link" href="docs/trading-system-report.pdf" target="_blank" rel="noopener">Read detailed project report <span>↗</span></a><span class="lang">Report language: English</span>
+              </div>
+            </details>
+          </div>
+          <div class="glyph" aria-hidden="true"><svg viewBox="0 0 120 80"><path d="M4 64 22 50 40 56 62 30 82 40 102 14 116 22"/></svg></div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><span>NLP / Text Analysis</span></div>
+          <div class="project-content">
+            <div class="project-title-row"><h3>Analysis of Lithuanian parliamentary transcripts</h3><span class="type-tag team">Team project</span></div>
+            <p>Using natural language processing to explore how topics, sentiment and key phrases in Seimas transcripts differ across parliamentary terms.</p>
+            <details>
+              <summary>Project details</summary>
+              <div class="detail-body">
+                <p>The coursework focuses on Lithuanian Seimas transcripts and compares material from the 2016–2020 and 2020–2024 periods. The analysis looks at recurring topics, sentiment and characteristic phrases to identify similarities and changes in parliamentary discussions.</p>
+                <p><strong>Focus:</strong> text preprocessing, NLP, topic exploration, sentiment analysis and key-phrase extraction.</p>
+                <a class="report-link" href="docs/parliamentary-transcripts-report.pdf" target="_blank" rel="noopener">Read detailed coursework report <span>↗</span></a><span class="lang">Report language: Lithuanian</span>
+              </div>
+            </details>
+          </div>
+          <div class="glyph" aria-hidden="true"><svg viewBox="0 0 120 80"><path d="M4 12h70M4 28h108M4 44h56M4 60h92M4 76h40"/></svg></div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><span>NLP / Topic Modelling</span></div>
+          <div class="project-content">
+            <div class="project-title-row"><h3>Exploring themes in song lyrics</h3><span class="type-tag team">Team project</span></div>
+            <p>Comparing topic-modelling methods to identify recurring themes in pop, rap and rock lyrics.</p>
+            <details>
+              <summary>Project details</summary>
+              <div class="detail-body">
+                <p>The project compares LSA, NMF and LDA across lyrics from selected artists and genres. It also examines how preprocessing choices — including removing choruses — affect the resulting topics.</p>
+                <p><strong>Tools:</strong> Python, NLP, LSA, NMF, LDA.</p>
+                <a class="report-link" href="docs/lyrics-topic-modelling-report.pdf" target="_blank" rel="noopener">Read detailed project report <span>↗</span></a><span class="lang">Report language: Lithuanian</span>
+              </div>
+            </details>
+          </div>
+          <div class="glyph" aria-hidden="true"><svg viewBox="0 0 120 80"><path d="M8 30v20M22 16v48M36 6v68M50 24v32M64 12v56M78 28v24M92 4v72M106 22v36"/></svg></div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><span>Machine Learning / Computer Vision</span></div>
+          <div class="project-content">
+            <div class="project-title-row"><h3>Muffin or chihuahua?</h3><span class="type-tag personal">Personal project</span></div>
+            <p>Training a convolutional neural network to distinguish between images of muffins and chihuahuas.</p>
+            <details>
+              <summary>Project details</summary>
+              <div class="detail-body">
+                <p>The dataset contained 5,917 images split into training, validation and test sets. The CNN was trained on resized images and evaluated on a held-out test set.</p>
+                <p class="result"><strong>Test accuracy:</strong> 92.24% in the recorded experiment.</p>
+                <p><strong>Tools:</strong> Python, TensorFlow / Keras, NumPy, Matplotlib.</p>
+                <a class="report-link" href="docs/muffin-chihuahua-report.pdf" target="_blank" rel="noopener">Read detailed project report <span>↗</span></a><span class="lang">Report language: Lithuanian</span>
+              </div>
+            </details>
+          </div>
+          <div class="glyph" aria-hidden="true"><svg viewBox="0 0 120 80"><circle cx="44" cy="40" r="28"/><circle cx="76" cy="40" r="28"/></svg></div>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><span>Regression / Statistics</span></div>
+          <div class="project-content">
+            <div class="project-title-row"><h3>Stroke prediction with binary response models</h3><span class="type-tag team">Team project</span></div>
+            <p>Comparing logit, probit and cloglog regression models to predict stroke from demographic, lifestyle and health indicators.</p>
+            <details>
+              <summary>Project details</summary>
+              <div class="detail-body">
+                <p>The coursework uses the Kaggle Stroke Prediction Dataset, which is strongly imbalanced (180 stroke cases among 3,343 cleaned records), so the classification threshold was tuned with the Youden index. The probit model performed best, and age, average glucose level, hypertension and heart disease were the significant risk factors.</p>
+                <p><strong>Tools:</strong> R, Python, logistic / probit / cloglog regression, ROC analysis.</p>
+                <a class="report-link" href="docs/stroke-regression-report.pdf" target="_blank" rel="noopener">Read detailed coursework report <span>↗</span></a><span class="lang">Report language: Lithuanian</span>
+              </div>
+            </details>
+          </div>
+          <div class="glyph" aria-hidden="true"><svg viewBox="0 0 120 80"><path d="M6 8v66h108"/><path d="M10 70C14 30 34 16 112 10"/><path d="M10 70 112 10" stroke-dasharray="3 6"/></svg></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="other-work page-width" id="other">
+      <div class="other-heading">
+        <div>
+          <p class="kicker">Additional work</p>
+          <h2>Other projects</h2>
+        </div>
+        <p>Alongside the selected projects, I have completed other coursework and smaller experiments in data analysis, statistics and neural networks.</p>
+      </div>
+      <div class="other-bottom">
+        <div class="other-topics">
+          <span>Statistical analysis</span>
+          <span>Regression exercises</span>
+          <span>Neural network experiments</span>
+          <span>Data processing</span>
+          <span>Data visualisation</span>
+        </div>
+        <p class="availability-note">Additional project descriptions, code and reports are available upon request.</p>
+      </div>
+    </section>
+
 
 <section class="contact page-width" id="contact">
   <p class="kicker">Contact</p>
@@ -217,11 +223,11 @@
     <p>I’m open to Data Science and Data Analyst internship opportunities. You can reach me through the links below.</p>
   </div>
   <div class="contact-links">
-    <a href="mailto:naglisbrazenas@gmail.com">Email ↗</a>
-    <a href="tel:+37062196211">Phone ↗</a>
-    <a href="https://www.linkedin.com/in/naglis-brazenas-11b1aa301/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-    <a href="https://www.instagram.com/nagli_ss17/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-    <a href="https://www.facebook.com/naglis.brazenas" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+    <a href="mailto:naglisbrazenas@gmail.com"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>Email</a>
+    <a href="tel:+37062196211"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Phone</a>
+    <a href="https://www.linkedin.com/in/naglis-brazenas-11b1aa301/" target="_blank" rel="noopener noreferrer"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+    <a href="https://www.instagram.com/nagli_ss17/" target="_blank" rel="noopener noreferrer"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>Instagram</a>
+    <a href="https://www.facebook.com/naglis.brazenas" target="_blank" rel="noopener noreferrer"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a>
   </div>
 </section>
 </main>
